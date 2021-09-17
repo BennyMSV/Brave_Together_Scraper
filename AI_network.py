@@ -23,6 +23,7 @@ class MyModel(nn.Module):
         self.embeddings = nn.Embedding(len(vocab), emb_dim).requires_grad_(True)
         self.lstm = nn.LSTM(input_size=emb_dim, hidden_size=hid_dim, num_layers=1)
         self.fc = nn.Linear(hid_dim, 1)
+        #Test
 
     def forward(self, x):
         x = torch.squeeze(x)
